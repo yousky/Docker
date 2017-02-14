@@ -25,6 +25,24 @@ docker run --name nodeinsp -v ~/nodeinsp:/home/node/app -p 8080:8080 -d yousky/n
 
 ```
 
+
+If you need npm install, you need to install it in the following way.
+```yml
+
+docker run -it --name nodeinspset -v ~/nodeinsp:/home/node/app -d yousky/nodeinspector:0.12.8-20170214-node4.7.3
+docker exec -it nodeinspset bash
+cd /home/node/app
+npm install
+chown -R node:node ../app/
+chmod -R g+w ../app/
+exit
+
+docker stop nodeinspset
+docker rm nodeinspset
+
+```
+
+
 Access Node Inspector on http://xxx.xxx.xxx.xxx:8080/?port=5858
 
 See also [Node Inspector](https://github.com/node-inspector/node-inspector).
