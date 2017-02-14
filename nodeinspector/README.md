@@ -6,16 +6,16 @@ Default Expose Port : 8080
 
 Mount the host node app directory to `/home/node/app`.
 
-example) 
-
-host app directory : ~/nodeinsp
-start script : ~/nodeinsp/index.js
+example host app directory : ~/nodeinsp
+example start script : ~/nodeinsp/index.js
 
 The following example equal "node-debug ~/nodeinsp/index.js".
 ```yml
+
 docker run --name nodeinsp -v ~/nodeinsp:/home/node/app -d yousky/nodeinspector:0.12.8-20170214-node4.7.3 /home/node/app/index.js
 
 ```
+
 
 The following example equal "node-debug --web-host=null --debug-brk ~/nodeinsp/index.js". 
 ```yml
