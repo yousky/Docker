@@ -25,7 +25,7 @@ server {
 
 Mount the host `/etc/letsencrypt` directory to `/etc/letsencrypt`.
 
-The following example equal "certbot certonly --webroot -w /etc/letsencrypt/www -d sample.com -d www.sample.com -d api.sample.com".
+The following example equal `certbot certonly --webroot -w /etc/letsencrypt/www -d sample.com -d www.sample.com -d api.sample.com`.
 ```yml
 
 docker run -it --rm -v /etc/letsencrypt:/etc/letsencrypt yousky/certbot:20170221-centos7.3.1611 certonly --webroot -w /etc/letsencrypt/www -d sample.com -d www.sample.com -d api.sample.com
