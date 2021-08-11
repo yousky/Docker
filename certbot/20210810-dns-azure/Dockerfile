@@ -1,4 +1,4 @@
-FROM certbot: v1.18.0
+FROM certbot/certbot:v1.18.0
 
 RUN pip install certbot-dns-azure
 
